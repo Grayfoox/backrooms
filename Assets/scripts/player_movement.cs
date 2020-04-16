@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class player_movement : MonoBehaviour
 {
-  
-   public float m_speed = 0.7;
+   private CharacterController m_controller;
+   public float m_speed = 0.7f;
    private void Awake()
    {
        m_controller = GetComponent<CharacterController>();

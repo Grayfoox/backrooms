@@ -39,7 +39,7 @@ public class Tile_generator : MonoBehaviour
                     string tile_name = "Tile_"+((int)(pos.x)).ToString() + "_" +((int)(pos.z)).ToString() +": "+picked_tile.ToString();
                     t.name = tile_name;
                     
-                     t.transform.parent = parent_object;
+                     t.transform.parent = parent_object.transform;
 
 
                     //Tile tile = new Tile(t,updateTime);

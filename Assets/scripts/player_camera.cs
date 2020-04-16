@@ -19,7 +19,7 @@ public class player_camera : MonoBehaviour
     private void LateUpdate()
   {
       m_mouse_x += Input.GetAxisRaw("Mouse X");
-      m_mouse_y += Input.GetAxisRaw("Mouse Y");
+      m_mouse_y -= Input.GetAxisRaw("Mouse Y");
       
       Quaternion camera_rotation = Quaternion.Euler(m_mouse_y, 0f, 0f);
       Quaternion player_rotation = Quaternion.Euler(0f, m_mouse_x, 0f);
