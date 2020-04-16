@@ -20,6 +20,7 @@ public class Tile_generator : MonoBehaviour
     public int number_of_tile_x;
     public int number_of_tile_z;
     
+    public GameObject parent_object;
     //hastable tiles = new Hastable();
 
     // Start is called before the first frame update
@@ -38,6 +39,9 @@ public class Tile_generator : MonoBehaviour
                     string tile_name = "Tile_"+((int)(pos.x)).ToString() + "_" +((int)(pos.z)).ToString() +": "+picked_tile.ToString();
                     t.name = tile_name;
                     
+                     t.transform.parent = parent_object;
+
+
                     //Tile tile = new Tile(t,updateTime);
                     //tiles.Add(tile_name, tile);
 
