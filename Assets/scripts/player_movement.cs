@@ -16,6 +16,7 @@ public class player_movement : MonoBehaviour
        float horizontal = Input.GetAxisRaw("Horizontal");
        float vertical = Input.GetAxisRaw("Vertical");
        Vector3 move_dir = (horizontal*transform.right) + (vertical * transform.forward);
+       move_dir *= m_speed;
        m_controller.Move(move_dir * m_speed);
    }
 }
